@@ -21,7 +21,7 @@ const SelectorForm = connect(
     spouseChurchMember: selector(state, 'maritalData.isSpouseChurchMember'),
     churchMember: selector(state, 'churchMember'),
     churchMinistryType: selector(state, 'churchMinistry.type'),
-    repented: selector(state, 'churchMinistry.repented'),
+    ordained: selector(state, 'churchMinistry.ordained'),
     hasJob: selector(state, 'hasJob'),
     howFindOut: selector(state, 'howFindOut'),
   }),

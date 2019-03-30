@@ -59,11 +59,11 @@ const filterChurchData = student => {
       s.setIn(['churchMinistry', 'type'], s.getIn(['churchMinistry', 'otherType']))
         .deleteIn(['churchMinistry', 'otherType'])
     ) : s;
-  const filterRepentanceDate = s =>
-    !s.getIn(['churchMinistry', 'repented']) ? (
-      s.deleteIn(['churchMinistry', 'repentanceDate'])
+  const filterOrdinationDate = s =>
+    !s.getIn(['churchMinistry', 'ordained']) ? (
+      s.deleteIn(['churchMinistry', 'ordinationDate'])
     ) : s;
-  return pipe(filterBlocks, filterOtherMinistryType, filterRepentanceDate)(student);
+  return pipe(filterBlocks, filterOtherMinistryType, filterOrdinationDate)(student);
 };
 
 const filterJob = student => !student.get('hasJob') ? student.delete('job') : student;

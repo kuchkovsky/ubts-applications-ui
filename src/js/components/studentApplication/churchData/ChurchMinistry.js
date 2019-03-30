@@ -9,7 +9,7 @@ import ReduxBooleanRadioGroup from '../../shared/ReduxBooleanRadioGroup';
 import ReduxTextField from '../../shared/ReduxTextField';
 
 const ChurchMinistry = props => {
-  const { classes, repented } = props;
+  const { classes, ordained } = props;
   return (
     <div>
       <Typography variant="subtitle1" className={classes.sectionSubtitle}>
@@ -39,8 +39,8 @@ const ChurchMinistry = props => {
       <Typography variant="subtitle1" className={classes.question}>
         Чи ви рукопокладений служитель?
       </Typography>
-      <ReduxBooleanRadioGroup name="churchMinistry.repented"/>
-      <Collapse in={repented}>
+      <ReduxBooleanRadioGroup name="churchMinistry.ordained"/>
+      <Collapse in={ordained}>
         <Field
           name="churchMinistry.ordinationDate"
           label="Рік рукопокладання *"
@@ -67,7 +67,7 @@ const ChurchMinistry = props => {
 
 ChurchMinistry.propTypes = {
   classes: PropTypes.object.isRequired,
-  repented: PropTypes.bool,
+  ordained: PropTypes.bool,
 };
 
 export default ChurchMinistry;

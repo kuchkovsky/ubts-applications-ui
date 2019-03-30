@@ -59,10 +59,10 @@ const initialState = fromJS({
       phone: undefined,
     },
     churchMinistry: {
-      repented: true,
       repentanceDate: today,
       baptismDate: today,
       type: churchMinistryType.pastor,
+      ordained: true,
       ordinationDate: today,
       churchParticipation: undefined,
     },
