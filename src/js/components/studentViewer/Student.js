@@ -33,7 +33,10 @@ const Student = props => {
             <img src={studentPhoto} className={classes.portraitPhoto}/> }
         </Grid>
         <Grid item>
-          <Field name="Програма" text={student.program.name}/>
+          <Field
+            name="Програма"
+            text={`${student.program.name}${student.program.info ? ` - ${student.program.info}` : ''}`}
+          />
           <PersonalData {...props}/>
           <Residence {...props}/>
           <Education {...props}/>

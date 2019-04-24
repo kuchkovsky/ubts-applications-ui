@@ -14,7 +14,9 @@ import { STUDENTS } from '../../utils/routes';
 const Student = ({ data, index, onDelete }) => (
   <ListItem button component={Link} to={`${STUDENTS}/${data.id}`}>
     <ListItemAvatar>
-      <Avatar>US</Avatar>
+      <Avatar>
+        {`${data.name.charAt(0)}${data.name.charAt(data.name.indexOf(' ') + 1)}`}
+      </Avatar>
     </ListItemAvatar>
     <ListItemText
       primary={
