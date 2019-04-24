@@ -48,11 +48,6 @@ const Group = props => {
               </EmptyListText> }
             { students }
           </Collapse>
-          <Collapse in={!opened}>
-            <EmptyListText>
-              Список приховано. Натисніть +, щоб розгорнути
-            </EmptyListText>
-          </Collapse>
         </Grid>
       </Grid>
     </ListItem>
