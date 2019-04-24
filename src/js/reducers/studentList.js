@@ -23,6 +23,8 @@ const initialState = fromJS({
   exportDialogOpened: false,
 });
 
+const sortPrograms = programs => programs.sort((a, b) => a.name.localeCompare(b.name));
+
 const studentListReducer = (state = initialState, action) => {
   switch (action.type) {
   case actions.STUDENT_LIST_STUDENTS_LOADED:
@@ -32,7 +34,7 @@ const studentListReducer = (state = initialState, action) => {
     return state.set('years', fromJS(action.payload));
 
   case actions.STUDENT_LIST_PROGRAMS_LOADED:
-    return state.set('programs', fromJS(action.payload));
+    return state.set('programs', fromJS(sortPrograms(action.payload)));
 
   case actions.STUDENT_LIST_CHANGE_SEARCH_QUERY:
     return state.set('searchQuery', action.payload);
