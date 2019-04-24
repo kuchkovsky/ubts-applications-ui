@@ -1,6 +1,6 @@
 import { createAction } from 'redux-actions';
 import axios from 'axios';
-import { STUDENTS, YEARS, PROGRAMS } from '../utils/apiEndpoints';
+import { STUDENTS, YEARS, PROGRAMS, STUDENT_TASKS, EXPORT_EXCEL } from '../utils/apiEndpoints';
 import { loadMainContent } from './index';
 
 export const STUDENT_LIST_STUDENTS_LOADED = 'STUDENT_LIST_STUDENTS_LOADED';
@@ -33,6 +33,21 @@ export const removeStudentFromList = createAction(STUDENT_LIST_REMOVE_STUDENT);
 export const STUDENT_LIST_TOGGLE_DELETE_ERROR_MESSAGE = 'STUDENT_LIST_TOGGLE_DELETE_ERROR_MESSAGE';
 export const toggleDeleteErrorMessage = createAction(STUDENT_LIST_TOGGLE_DELETE_ERROR_MESSAGE);
 
+export const STUDENT_LIST_OPEN_EXPORT_DIALOG = 'STUDENT_LIST_OPEN_EXPORT_DIALOG';
+export const openExportDialog = createAction(STUDENT_LIST_OPEN_EXPORT_DIALOG);
+
+export const STUDENT_LIST_CLOSE_EXPORT_DIALOG = 'STUDENT_LIST_CLOSE_EXPORT_DIALOG';
+export const closeExportDialog = createAction(STUDENT_LIST_CLOSE_EXPORT_DIALOG);
+
+export const STUDENT_LIST_EXPORT_PENDING = 'STUDENT_LIST_EXPORT_PENDING';
+export const exportPending = createAction(STUDENT_LIST_EXPORT_PENDING);
+
+export const STUDENT_LIST_EXPORT_SUCCESS = 'STUDENT_LIST_EXPORT_SUCCESS';
+export const exportSuccess = createAction(STUDENT_LIST_EXPORT_SUCCESS);
+
+export const STUDENT_LIST_EXPORT_ERROR = 'STUDENT_LIST_EXPORT_ERROR';
+export const exportError = createAction(STUDENT_LIST_EXPORT_ERROR);
+
 export const loadStudents = () =>
   dispatch =>
     dispatch(loadMainContent(STUDENTS, studentsLoaded));
@@ -50,3 +65,18 @@ export const deleteStudent = id =>
     axios.delete(`${STUDENTS}/${id}`)
       .then(() => dispatch(removeStudentFromList(id)))
       .catch(() => dispatch(toggleDeleteErrorMessage(true)));
+
+const exportStudentsToExcel = () =>
+  (dispatch, getState) => {
+    const years = getState().getIn(['studentList', 'selectedYears']).join(',');
+    dispatch(exportPending());
+    axios.post(`${STUDENT_TASKS}/${EXPORT_EXCEL}?years=${years}`)
+      .then(() => dispatch(exportSuccess()))
+      .catch(() => dispatch(exportError()));
+  };
+
+export const exportStudents = () =>
+  dispatch => {
+    dispatch(openExportDialog());
+    dispatch(exportStudentsToExcel());
+  };

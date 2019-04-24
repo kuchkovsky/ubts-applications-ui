@@ -13,6 +13,12 @@ export const studentPhotoLoaded = createAction(STUDENT_VIEWER_STUDENT_PHOTO_LOAD
 export const STUDENT_VIEWER_RESET_STUDENT_PHOTO = 'STUDENT_VIEWER_RESET_STUDENT_PHOTO';
 export const resetStudentPhoto = createAction(STUDENT_VIEWER_RESET_STUDENT_PHOTO);
 
+export const STUDENT_VIEWER_OPEN_FILE_DOWNLOAD_DIALOG = 'STUDENT_VIEWER_OPEN_FILE_DOWNLOAD_DIALOG';
+export const openFileDownloadDialog = createAction(STUDENT_VIEWER_OPEN_FILE_DOWNLOAD_DIALOG);
+
+export const STUDENT_VIEWER_CLOSE_FILE_DOWNLOAD_DIALOG = 'STUDENT_VIEWER_CLOSE_FILE_DOWNLOAD_DIALOG';
+export const closeFileDownloadDialog = createAction(STUDENT_VIEWER_CLOSE_FILE_DOWNLOAD_DIALOG);
+
 export const loadStudent = id =>
   dispatch =>
     dispatch(loadMainContent(`${STUDENTS}/${id}`, studentLoaded));

@@ -40,3 +40,7 @@ export const getFilteredStudents = state => {
 export const getDeleteAlert = state => state.getIn(['studentList', 'deleteAlert']);
 
 export const getDeleteErrorMessage = state => state.getIn(['studentList', 'deleteErrorMessage']);
+
+export const getExportDialogOpened = state => state.getIn(['studentList', 'exportDialogOpened']);
+
+export const getExportStatus = state => state.getIn(['studentList', 'exportStatus']);

@@ -12,6 +12,8 @@ import {
   hideDeleteAlert,
   deleteStudent,
   toggleDeleteErrorMessage,
+  exportStudents,
+  closeExportDialog,
 } from '../actions/studentList';
 import * as selectors from '../selectors/studentList';
 
@@ -25,6 +27,8 @@ const mapStateToProps = state => ({
   selectedTab: selectors.getSelectedTab(state),
   deleteAlert: selectors.getDeleteAlert(state),
   deleteErrorMessage: selectors.getDeleteErrorMessage(state),
+  exportDialogOpened: selectors.getExportDialogOpened(state),
+  exportStatus: selectors.getExportStatus(state),
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -40,6 +44,8 @@ const mapDispatchToProps = dispatch => ({
   hideDeleteAlert: () => dispatch(hideDeleteAlert()),
   deleteStudent: id => dispatch(deleteStudent(id)),
   toggleDeleteErrorMessage: open => dispatch(toggleDeleteErrorMessage(open)),
+  exportStudents: () => dispatch(exportStudents()),
+  closeExportDialog: () => dispatch(closeExportDialog()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(withImmutablePropsToJS(StudentList));

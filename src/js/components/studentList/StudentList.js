@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
+import Fab from '@material-ui/core/Fab';
+import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 import List from '@material-ui/core/List';
 import SearchBar from './SearchBar';
 import Tabs from './Tabs';
@@ -12,6 +14,8 @@ import EmptyListText from './EmptyListText';
 import DeleteAlert from './DeleteAlert';
 import DeleteErrorPopup from './DeleteErrorPopup';
 import Years from './Years';
+import fabStyles from '../../styles/fab';
+import ExportDialog from './ExportDialog';
 
 const styles = theme => ({
   card: {
@@ -27,6 +31,12 @@ const TABS = {
   GROUP_LIST: 1,
 };
 
+const ExportFab = withStyles(fabStyles)(({ classes, onClick }) => (
+  <Fab color="primary" className={classes.fab} onClick={onClick}>
+    <CloudUploadIcon/>
+  </Fab>
+));
+
 const StudentList = props => {
   const {
     classes,
@@ -37,6 +47,10 @@ const StudentList = props => {
     loadData,
     selectedTab,
     showDeleteAlert,
+    exportStudents,
+    exportStatus,
+    exportDialogOpened,
+    closeExportDialog,
   } = props;
 
   const loadStudentsIfEmpty = () => {
@@ -85,6 +99,12 @@ const StudentList = props => {
       </List>
       <DeleteAlert {...props}/>
       <DeleteErrorPopup {...props}/>
+      <ExportFab onClick={exportStudents}/>
+      <ExportDialog
+        showDialog={exportDialogOpened}
+        exportStatus={exportStatus}
+        onClose={closeExportDialog}
+      />
     </Card>
   );
 };
@@ -98,6 +118,10 @@ StudentList.propTypes = {
   selectedTab: PropTypes.number.isRequired,
   loadData: PropTypes.func.isRequired,
   showDeleteAlert: PropTypes.func.isRequired,
+  exportStudents: PropTypes.func.isRequired,
+  exportStatus: PropTypes.object.isRequired,
+  exportDialogOpened: PropTypes.bool,
+  closeExportDialog: PropTypes.func.isRequired,
 };
 
 export default withStyles(styles)(StudentList);

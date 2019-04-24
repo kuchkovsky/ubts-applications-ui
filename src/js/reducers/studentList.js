@@ -16,6 +16,11 @@ const initialState = fromJS({
     studentId: undefined,
   },
   deleteErrorMessage: false,
+  exportStatus: {
+    pending: false,
+    error: false,
+  },
+  exportDialogOpened: false,
 });
 
 const studentListReducer = (state = initialState, action) => {
@@ -53,6 +58,21 @@ const studentListReducer = (state = initialState, action) => {
 
   case actions.STUDENT_LIST_TOGGLE_DELETE_ERROR_MESSAGE:
     return state.set('deleteErrorMessage', action.payload);
+
+  case actions.STUDENT_LIST_OPEN_EXPORT_DIALOG:
+    return state.set('exportDialogOpened', true);
+
+  case actions.STUDENT_LIST_CLOSE_EXPORT_DIALOG:
+    return state.set('exportDialogOpened', false);
+
+  case actions.STUDENT_LIST_EXPORT_PENDING:
+    return state.mergeIn(['exportStatus'], fromJS({ pending: true, error: false }));
+
+  case actions.STUDENT_LIST_EXPORT_SUCCESS:
+    return state.mergeIn(['exportStatus'], fromJS({ pending: false, error: false }));
+
+  case actions.STUDENT_LIST_EXPORT_ERROR:
+    return state.mergeIn(['exportStatus'], fromJS({ pending: false, error: true }));
 
   default:
     return state;
