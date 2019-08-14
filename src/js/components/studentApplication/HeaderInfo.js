@@ -2,8 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 
-const HeaderInfo = ({ classes }) => (
+const HeaderInfo = ({ classes, registrationOpened }) => (
   <section className={classes.justify}>
+    { !registrationOpened &&
+      <Typography variant="h6" style={{ padding: '10px 0 20px 0', color: 'red' }}>
+        Шановний абітурієнте! Подачу документів на вступ до УБТС завершено.
+        Ви матимете можливість вступити до нашої семінарії наступного року.
+        Божих Вам благословінь!
+      </Typography>
+    }
     <Typography variant="body1" gutterBottom>
       Для того, щоб заповнити цю анкету, будь ласка, спочатку підготуйте скан-копії або фото
       в добрій якості таких документів: паспорт (перша, друга сторінки та сторінка з пропискою),
@@ -28,6 +35,7 @@ const HeaderInfo = ({ classes }) => (
 
 HeaderInfo.propTypes = {
   classes: PropTypes.object.isRequired,
+  registrationOpened: PropTypes.bool.isRequired,
 };
 
 export default HeaderInfo;

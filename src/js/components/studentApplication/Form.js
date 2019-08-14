@@ -27,6 +27,7 @@ const Form = props => {
     handleSubmit,
     pristine,
     invalid,
+    registrationOpened,
   } = props;
   return (
     <form onSubmit={handleSubmit} className={classes.form}>
@@ -53,7 +54,7 @@ const Form = props => {
         variant="contained"
         color="primary"
         fullWidth
-        disabled={pristine || invalid}
+        disabled={pristine || invalid || !registrationOpened}
         className={classes.submit}
       >
         Зареєструватися
@@ -72,6 +73,7 @@ Form.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
   pristine: PropTypes.bool.isRequired,
   invalid: PropTypes.bool.isRequired,
+  registrationOpened: PropTypes.bool.isRequired,
   onSubmit: PropTypes.func.isRequired,
 };
 

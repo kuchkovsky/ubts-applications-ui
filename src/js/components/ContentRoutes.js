@@ -11,7 +11,7 @@ import {
   STUDENTS,
   SIGN_IN,
 } from '../utils/routes';
-import Main from './Main';
+import Main from '../containers/Main';
 import StudentApplication from '../containers/studentApplication/StudentApplication';
 import PastorApplication from '../containers/pastorApplication/PastorApplication';
 import FriendApplication from '../containers/friendApplication/FriendApplication';

@@ -21,3 +21,5 @@ export const FULL_NAME = 'full-name';
 export const PHOTO = 'photo';
 
 export const EXPORT_EXCEL = 'export-excel';
+
+export const REGISTRATION = '/registration/students';

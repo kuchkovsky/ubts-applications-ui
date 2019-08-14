@@ -10,12 +10,14 @@ import { formName } from './Form';
 import { handleNestedRadios } from '../../utils/form';
 import { scrollToTop } from '../../utils/misc';
 import * as selectors from '../../selectors/studentApplication';
+import { getRegistrationOpened } from '../../selectors';
 
 const mapStateToProps = state => ({
   initialValues: selectors.getInitialValues(state),
   upload: selectors.getUpload(state),
   showUploadSuccessAlert: selectors.getShowUploadSuccessAlert(state),
   studentId: selectors.getStudentId(state),
+  registrationOpened: getRegistrationOpened(state),
 });
 
 const mapDispatchToProps = dispatch => {

@@ -10,6 +10,7 @@ const initialState = fromJS({
     error: false,
     empty: false,
   },
+  registrationOpened: true,
 });
 
 const rootReducer = (state = initialState, action) => {
@@ -32,6 +33,9 @@ const rootReducer = (state = initialState, action) => {
 
   case actions.CONTENT_LOAD_EMPTY_CONTENT:
     return state.setIn(['contentLoad', 'empty'], true);
+
+  case actions.CHANGE_REGISTRATION_STATUS:
+    return state.set('registrationOpened', action.payload);
 
   default:
     return state;

@@ -10,8 +10,10 @@ import store from './configs/redux';
 import setupAxios from './configs/axios';
 import './configs/filepond';
 import './configs/history';
+import { checkRegistrationStatus } from './actions';
 
 setupAxios(store);
+checkRegistrationStatus(store);
 
 render((
   <Provider store={store}>
