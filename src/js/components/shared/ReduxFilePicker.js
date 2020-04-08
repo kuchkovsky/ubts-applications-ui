@@ -97,6 +97,8 @@ ReduxFilePicker.propTypes = {
   }).isRequired,
   meta: PropTypes.shape({
     error: PropTypes.string,
+    pristine: PropTypes.bool,
+    initial: PropTypes.bool,
   }).isRequired,
   serverUrl: PropTypes.string.isRequired,
 };
