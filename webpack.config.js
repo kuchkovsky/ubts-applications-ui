@@ -33,11 +33,6 @@ module.exports = (_, argv) => ({
         use: ['react-hot-loader/webpack'],
       },
       {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: ['babel-loader', 'eslint-loader'],
-      },
-      {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
       },

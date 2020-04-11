@@ -36,6 +36,22 @@ const PersonalData = (({ classes }) => (
       component={ReduxTextField}
     />
     <Field
+      name="internationalFirstName"
+      label="Ім’я латинськими буквами, як зазначено в закордонному паспорті"
+      variant="outlined"
+      margin="normal"
+      fullWidth
+      component={ReduxTextField}
+    />
+    <Field
+      name="internationalLastName"
+      label="Прізвище латинськими буквами, як зазначено в закордонному паспорті"
+      variant="outlined"
+      margin="normal"
+      fullWidth
+      component={ReduxTextField}
+    />
+    <Field
       name="birthDate"
       label="Дата народження *"
       openTo="year"

@@ -151,6 +151,54 @@ const fields = [
     required: requiredMessage,
   },
   {
+    name: 'mostDifficultBibleTheme',
+    required: requiredMessage,
+  },
+  {
+    name: 'answers',
+    required: requiredMessage,
+  },
+  {
+    name: 'lastVerseFromBible',
+    required: requiredMessage,
+  },
+  {
+    name: 'lastInterestingPreaching',
+    required: requiredMessage,
+  },
+  {
+    name: 'didYouReadBible',
+    required: requiredMessage,
+  },
+  {
+    name: 'prayForSomeone',
+    required: requiredMessage,
+  },
+  {
+    name: 'missions',
+    required: requiredMessage,
+  },
+  {
+    name: 'whenYouToldAboutChrist',
+    required: requiredMessage,
+  },
+  {
+    name: 'spiritGifts',
+    required: requiredMessage,
+  },
+  {
+    name: 'bestInChurch',
+    required: requiredMessage,
+  },
+  {
+    name: 'mentor',
+    required: requiredMessage,
+  },
+  {
+    name: 'mainInfluencer',
+    required: requiredMessage,
+  },
+  {
     name: 'otherHowFindOut',
     required: requiredMessage,
     when: otherHowFindOut,
