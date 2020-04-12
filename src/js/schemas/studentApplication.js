@@ -33,9 +33,8 @@ export const programs = {
     name: 'Програма розвитку молодих лідерів. Сертифікат. 2 роки',
     values: {
       lviv: 'Львів',
-      rivne: 'Рівне',
-      khmelnytskyi: 'Хмельницький',
-      kharkiv: 'Харків',
+      zakarpattia: 'Закарпання',
+      zhitomir: 'Житомир',
     },
   },
 };
