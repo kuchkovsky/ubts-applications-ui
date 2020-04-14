@@ -96,6 +96,8 @@ const initialState = fromJS({
     bestInChurch: undefined,
     mentor: undefined,
     mainInfluencer: undefined,
+    testTime: undefined,
+    testScore: undefined,
     howFindOut: howFindOutSchema.leader,
     files: {
       photo: undefined,

@@ -35,7 +35,7 @@ const ChurchResidence = ({ classes }) => (
     />
     <Field
       name="churchData.district"
-      label="Район *"
+      label="Район"
       variant="outlined"
       margin="normal"
       fullWidth

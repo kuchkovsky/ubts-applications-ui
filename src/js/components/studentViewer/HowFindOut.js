@@ -9,6 +9,12 @@ const HowFindOut = ({ classes, student }) => (
       Як дізнались про нашу семінарію
     </Typography>
     <Field name="Джерело" text={student.howFindOut}/>
+
+    <Typography variant="h5" className={classes.sectionTitle}>
+      Тест на знання Біблії
+    </Typography>
+    <Field name="Кількість балів за тест" text={student.testScore}/>
+    <Field name="Скільки часу ви витратили на складання тесту?" text={student.testTime}/>
   </section>
 );
 

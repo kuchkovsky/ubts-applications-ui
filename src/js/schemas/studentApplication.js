@@ -33,7 +33,7 @@ export const programs = {
     name: 'Програма розвитку молодих лідерів. Сертифікат. 2 роки',
     values: {
       lviv: 'Львів',
-      zakarpattia: 'Закарпання',
+      zakarpattia: 'Закарпаття',
       zhitomir: 'Житомир',
     },
   },

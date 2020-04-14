@@ -58,7 +58,6 @@ const fields = [
   },
   {
     name: 'residence.district',
-    required: requiredMessage,
   },
   {
     name: 'residence.street',
@@ -115,7 +114,6 @@ const fields = [
   },
   {
     name: 'churchData.district',
-    required: requiredMessage,
     when: churchMember,
   },
   {
@@ -199,9 +197,12 @@ const fields = [
     required: requiredMessage,
   },
   {
-    name: 'otherHowFindOut',
+    name: 'testScore',
     required: requiredMessage,
-    when: otherHowFindOut,
+  },
+  {
+    name: 'testTime',
+    required: requiredMessage,
   },
   {
     name: 'files.photo',

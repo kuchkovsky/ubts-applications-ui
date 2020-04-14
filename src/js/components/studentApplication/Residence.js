@@ -43,7 +43,7 @@ const Residence = ({ classes }) => (
     />
     <Field
       name="residence.district"
-      label="Район *"
+      label="Район"
       variant="outlined"
       margin="normal"
       fullWidth
