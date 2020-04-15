@@ -28,6 +28,14 @@ const fields = [
     required: requiredMessage,
   },
   {
+    name: 'internationalFirstName',
+    required: requiredMessage,
+  },
+  {
+    name: 'internationalLastName',
+    required: requiredMessage,
+  },
+  {
     name: 'birthDate',
     required: requiredMessage,
   },

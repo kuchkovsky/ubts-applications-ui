@@ -37,7 +37,7 @@ const PersonalData = (({ classes }) => (
     />
     <Field
       name="internationalFirstName"
-      label="Ім’я латинськими буквами, як зазначено в закордонному паспорті"
+      label="Ім’я латинськими буквами, як зазначено в закордонному паспорті *"
       variant="outlined"
       margin="normal"
       fullWidth
@@ -45,7 +45,7 @@ const PersonalData = (({ classes }) => (
     />
     <Field
       name="internationalLastName"
-      label="Прізвище латинськими буквами, як зазначено в закордонному паспорті"
+      label="Прізвище латинськими буквами, як зазначено в закордонному паспорті *"
       variant="outlined"
       margin="normal"
       fullWidth
