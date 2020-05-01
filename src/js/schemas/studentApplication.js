@@ -32,7 +32,7 @@ export const programs = {
   youthLeadersDev: {
     name: 'Програма розвитку молодих лідерів. Сертифікат. 2 роки',
     values: {
-      lviv: '<span style="color:red;">New!</span> Львів (хлопці та дівчата)',
+      lviv: 'Львів (хлопці та дівчата)',
       zakarpattia: 'Закарпаття (хлопці)',
       zhitomir: 'Житомир (хлопці)',
       rivne: 'Рівне (хлопці)',
