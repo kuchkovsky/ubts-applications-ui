@@ -1,44 +1,67 @@
 export const programs = {
-  pastorMinistry: {
-    name: 'Пасторське служіння. Бакалавр. 4 роки',
-  },
-  evangelismAndchurchOrganization: {
-    name: 'Євангелизму та організації нових церков. Бакалавр. 4 роки',
-  },
-  churchMinistryDev: {
-    name: 'Розвиток церковних служінь. Бакалавр. 4 роки. Львів',
-  },
-  womenMinistry: {
-    name: 'Менторство та ефективне служіння (для дівчат та молодих жінок)',
+  staticEducation: {
+    name: 'МОДУЛЬНЕ навчання. 5 стаціонарних сесій, 2 онлайн сесії на рік + особисте менторство.',
     values: {
-      lviv2years: 'Львів. Сертифікат. 2 роки',
-      lviv4years: 'Львів. Бакалавр. 4 роки',
-    },
+      pastorMinistry: {
+        name: 'Пасторське служіння. Бакалавр. 4 роки',
+      },
+      evangelismAndchurchOrganization: {
+        name: 'Євангелизму та організації нових церков. Бакалавр. 4 роки',
+      },
+      churchMinistryDev: {
+        name: 'Розвиток церковних служінь. Бакалавр. 4 роки. Львів',
+      },
+      womenMinistry: {
+        name: 'Менторство та ефективне служіння (для дівчат та молодих жінок)',
+        values: {
+          lviv2years: 'Львів. Сертифікат. 2 роки',
+          lviv4years: 'Львів. Бакалавр. 4 роки',
+        },
+      },
+      internationalMission: {
+        name: 'Міжнародна місія',
+        values: {
+          years2: 'Сертифікат. 2 роки',
+          years4: 'Бакалавр. 4 роки',
+        },
+      },
+      musicalMinistry: {
+        name: 'Музичне служіння. Бакалавр. 4 роки',
+        values: {
+          choralDirection: 'Хоровий напрямок',
+          varietyDirection: 'Естрадний напрямок',
+        },
+      },
+      youthLeadersDev: {
+        name: 'Програма розвитку молодих лідерів. Сертифікат. 2 роки',
+        values: {
+          lviv: 'Львів (хлопці та дівчата)',
+          zakarpattia: 'Закарпаття (хлопці)',
+          zhitomir: 'Житомир (хлопці)',
+          rivne: 'Рівне (хлопці)',
+        },
+      },
+    }
   },
-  internationalMission: {
-    name: 'Міжнародна місія',
+  onlineEducation: {
+    name: 'New! ОНЛАЙН навчання: 5 онлайн сесій на рік + менторство в групі.',
     values: {
-      years2: 'Сертифікат. 2 роки',
-      years4: 'Бакалавр. 4 роки',
-    },
-  },
-  musicalMinistry: {
-    name: 'Музичне служіння. Бакалавр. 4 роки',
-    values: {
-      choralDirection: 'Хоровий напрямок',
-      varietyDirection: 'Естрадний напрямок',
-    },
-  },
-  youthLeadersDev: {
-    name: 'Програма розвитку молодих лідерів. Сертифікат. 2 роки',
-    values: {
-      lviv: 'Львів (хлопці та дівчата)',
-      zakarpattia: 'Закарпаття (хлопці)',
-      zhitomir: 'Житомир (хлопці)',
-      rivne: 'Рівне (хлопці)',
-    },
-  },
+      churchMinistryDev: {
+        name: 'Розвиток церковний служінь. Диплом. 2 роки',
+      },
+      christianMinistryDev: {
+        name: 'Християнське служіння. Сертифікат. 1 рік',
+      },
+      youthLeadersDev: {
+        name: 'Програма розвитку молодих лідерів. Сертифікат. 1 рік',
+      }
+    }
+  }
 };
+
+export const onlinePrograms = {
+  
+}
 
 export const education = {
   secondaryEducation: 'Середня',

@@ -12,6 +12,8 @@ const Program = ({ classes, programName, handleNestedRadios }) => (
     <Typography variant="h6" className={classes.sectionTitle}>
       За якою програмою бажаєте навчатися?
     </Typography>
+
+    
     { Object.keys(programs).map(key => (
       <div key={key}>
         <Field name="program.name" component={ReduxRadioGroup}>
