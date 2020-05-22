@@ -12,9 +12,10 @@ const Program = ({ classes, programName, handleNestedRadios }) => (
     <Typography variant="h6" className={classes.sectionTitle}>
       За якою програмою бажаєте навчатися?
     </Typography>
+    <br></br>
     <Typography variant="h6" className={classes.sectionTitle}>
       МОДУЛЬНЕ навчання. 5 стаціонарних сесій, 2 онлайн сесії на рік + особисте менторство.
-    </Typography>   
+    </Typography>
     { Object.keys(programs).map(key => (
       <div key={key}>
         <Field name="program.name" component={ReduxRadioGroup}>
@@ -36,11 +37,11 @@ const Program = ({ classes, programName, handleNestedRadios }) => (
             </div>
           </Collapse> }
       </div>))}
-
-      <Typography variant="h6" className={classes.sectionTitle}>
+      <br></br>
+    <Typography variant="h6" className={classes.sectionTitle}>
       New! ОНЛАЙН навчання: 5 онлайн сесій на рік + менторство в групі.
-      </Typography>    
-      { Object.keys(onlinePrograms).map(key => (
+    </Typography>
+    { Object.keys(onlinePrograms).map(key => (
       <div key={key}>
         <Field name="program.name" component={ReduxRadioGroup}>
             [<ReduxRadioButton value={onlinePrograms[key].name} onClick={handleNestedRadios}/>]
