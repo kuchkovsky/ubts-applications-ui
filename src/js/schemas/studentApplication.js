@@ -42,7 +42,7 @@ export const programs = {
 
 export const onlinePrograms = {
   churchMinistryDev: {
-    name: 'Розвиток церковний служінь. Диплом. 2 роки',
+    name: 'Розвиток церковних служінь. Диплом. 2 роки',
   },
   christianMinistryDev: {
     name: 'Християнське служіння. Сертифікат. 1 рік',
