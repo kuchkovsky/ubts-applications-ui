@@ -246,11 +246,9 @@ const fields = [
   },
   {
     name: 'files.medicalReference1',
-    required: requiredMessage,
   },
   {
     name: 'files.medicalReference2',
-    required: requiredMessage,
   },
   {
     name: 'agree',
