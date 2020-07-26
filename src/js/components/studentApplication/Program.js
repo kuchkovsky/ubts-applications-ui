@@ -5,7 +5,7 @@ import Collapse from '@material-ui/core/Collapse';
 import Typography from '@material-ui/core/Typography';
 import ReduxRadioGroup from '../shared/ReduxRadioGroup';
 import ReduxRadioButton from '../shared/ReduxRadioButton';
-import { programs, onlinePrograms } from '../../schemas/studentApplication';
+import { programs, onlinePrograms, womenPrograms } from '../../schemas/studentApplication';
 
 const Program = ({ classes, programName, handleNestedRadios }) => (
   <section className={classes.section}>
@@ -54,6 +54,31 @@ const Program = ({ classes, programName, handleNestedRadios }) => (
                 { Object.keys(onlinePrograms[key].values).map(value => (
                   <ReduxRadioButton
                     value={onlinePrograms[key].values[value]}
+                    onClick={handleNestedRadios}
+                    key={value}
+                  />
+                )) }
+              </Field>
+            </div>
+          </Collapse> }
+      </div>))}
+      <br></br>
+      <Typography variant="h6" className={classes.sectionTitle}>
+      New! Школа Менторства і Коучингу для дівчат та жінок. 5 сесій: 2 стаціонарні і 3 онлайн 
+    </Typography>
+    { Object.keys(womenPrograms).map(key => (
+      <div key={key}>
+        <Field name="program.name" component={ReduxRadioGroup}>
+            [<ReduxRadioButton value={womenPrograms[key].name} onClick={handleNestedRadios}/>]
+        </Field>
+        { womenPrograms[key].values &&
+          <Collapse in={programName === womenPrograms[key].name}>
+            <div>
+              <Field name="program.info" component={ReduxRadioGroup}
+                className={classes.nestedRadioGroup}>
+                { Object.keys(womenPrograms[key].values).map(value => (
+                  <ReduxRadioButton
+                    value={womenPrograms[key].values[value]}
                     onClick={handleNestedRadios}
                     key={value}
                   />

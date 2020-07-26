@@ -52,6 +52,12 @@ export const onlinePrograms = {
   },
 };
 
+export const womenPrograms = {
+  womenCoachingDev: {
+    name: 'Школа Менторства і Коучингу. Сертифікат. 1 рік',
+  }
+};
+
 export const education = {
   secondaryEducation: 'Середня',
   vocationalEducation: 'Середньо-спеціальна',
