@@ -36,6 +36,7 @@ export const programs = {
       zakarpattia: 'Закарпаття (хлопці)',
       zhitomir: 'Житомир (хлопці)',
       rivne: 'Рівне (хлопці)',
+      lutsk: 'Луцьк (хлопці)'
     },
   },
 };
