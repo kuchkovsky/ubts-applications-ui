@@ -22,6 +22,8 @@ const initialState = fromJS({
     phone1: undefined,
     phone2: undefined,
     email: undefined,
+    internationalFirstName: undefined,
+    internationalLastName: undefined,
     hasJob: true,
     job: undefined,
     residence: {

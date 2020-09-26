@@ -18,6 +18,8 @@ const PersonalData = ({ classes, student }) => (
     { student.phone2 &&
       <Field name="Телефон 2" text={student.phone2}/> }
     <Field name="Email" text={student.email}/>
+    <Field name="Міжнародне ім'я" text={student.internationalFirstName}/>
+    <Field name="Міжнародне прізвище" text={student.internationalLastName}/>
   </section>
 );
 
